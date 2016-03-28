@@ -44,6 +44,8 @@ use Agent Code = UDDD88, Password = UDDD888 and Service User Number = 123456789 
 Testing
 -------
 
+The tests outlined in this section are for developers and are not required when installing the iATS extension. If you are having troubles, then this set of testing procedures may prove helpful.
+
 1. Our test matrix includes 21 type of transactions at the moment -> view a summary of the results here: https://cloud.githubusercontent.com/assets/5340555/5616064/2459a9b8-94be-11e4-84c7-2ef0c83cc744.png - UK Direct Debit is still in beta at this time. 
 
 2. Manage Contribution Pages -> Links -> Live Page.
@@ -91,7 +93,7 @@ Testing
 
 14. To test ACH/EFT contributions - manually run Scheduled Job: iATS Payments Verification - it will check with iATS to see if there is any word from the bank yet. How long it takes before a yeah or neah is available depends on the day of the week and the time the transaction is submitted. It can take overnight (over weekend) to get a verification. 
 
-Once you're happy all is well - then all you need to do is update the Payment Processor data - with your own iATS' Agent Code and Password.
+Once you're happy all is well in terms of the code working in your instance, then you can move it from test to production by updating the Payment Processor data with your own iATS' Agent Code and Password.
 
 Remember that iATS master accounts (ending in 01) can typically NOT be used to push monies into via web services. So when setting up your Account with iATS - ask them to create another (set of) Agent Codes for you: e.g. 80 or 90, etc.
 
